@@ -5,12 +5,16 @@ using TMPro;
 
 public class TextAdvance : MonoBehaviour {
 
-	string[] input;
+	public string[] input;
         TextMeshPro text;
 	int counter = -1;
         
 	public void Init (string[] textToPrint){
-                input = textToPrint;
+		input = textToPrint;
+		text = GameObject.Find("TextDisplay(Clone)").GetComponentInChildren<TextMeshPro>();
+               StartCoroutine("writeText");
+
+
         }
         IEnumerator writeText(){
 		counter ++;
@@ -21,11 +25,7 @@ public class TextAdvance : MonoBehaviour {
                 }
         }
         // Use this for initialization
-        void Start (){ 
-		input = new string[1];
-                text = GameObject.Find("TextDisplay(Clone)").GetComponentInChildren<TextMeshPro>();
-		input[0] = "hey hey hey";
-                StartCoroutine("writeText");
+        void Start (){
         }
 
         // Update is called once per frame
@@ -38,6 +38,6 @@ public class TextAdvance : MonoBehaviour {
 			}
 		}
 
-        
-	}}
+	}
+}
 
