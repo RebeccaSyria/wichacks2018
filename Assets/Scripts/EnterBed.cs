@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnterBed : MonoBehaviour {
 	private void OnTriggerStay2D(Collider2D collision){
 	if(Input.GetKey(KeyCode.Space)){
-		Debug.Log("we got it");
+		UnityEngine.Object x = Instantiate(Resources.Load("TextDisplay"));
+
 	}
 }
 }
