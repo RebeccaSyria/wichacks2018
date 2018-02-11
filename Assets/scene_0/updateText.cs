@@ -29,6 +29,7 @@ public class updateText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	if (Input.GetMouseButtonDown(0)){
+
 		if(counter == dialogue.Length-1){
 			SceneManager.LoadScene("Scene1");
 		}else{	
